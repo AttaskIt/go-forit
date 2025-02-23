@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package simple;
+
+option go_package = "github.com/AttaskIt/go-forit/test/simple";
+
+message Hello {
+    string greeting = 1;
+}
