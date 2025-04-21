@@ -2,3 +2,15 @@
 // See github.com/AttaskIt/protoc-gen-go-forit
 
 package simple
+
+import (
+	"fmt"
+)
+
+func SayHelloGoForIt(input *HelloRequest) {
+	fmt.Println(input)
+}
+
+func GoodbyeGoForIt(input *GoodbyeRequest) {
+	fmt.Println(input)
+}

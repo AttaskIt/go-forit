@@ -7,8 +7,13 @@ option go_package = "github.com/AttaskIt/go-forit/test/simple";
 
 service Greeter {
   rpc SayHello (HelloRequest) returns (google.protobuf.Empty) {}
+  rpc Goodbye (GoodbyeRequest) returns (google.protobuf.Empty) {}
 }
 
 message HelloRequest {
     string greeting = 1;
+}
+
+message GoodbyeRequest {
+    string farewell = 1;
 }
