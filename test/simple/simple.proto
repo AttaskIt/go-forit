@@ -1,9 +1,14 @@
 syntax = "proto3";
 
+import "google/protobuf/empty.proto";
 package simple;
 
 option go_package = "github.com/AttaskIt/go-forit/test/simple";
 
-message Hello {
+service Greeter {
+  rpc SayHello (HelloRequest) returns (google.protobuf.Empty) {}
+}
+
+message HelloRequest {
     string greeting = 1;
 }
