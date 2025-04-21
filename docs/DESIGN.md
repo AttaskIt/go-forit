@@ -1,12 +1,13 @@
-# go-forit (Go For It)
+## Initial design
 
 Go For It goal is to be a super easy opt-in - opt-out plugin allowing to do simple async calls for an go gRPC services.
 It should do two things:
-- Create go-forit client
-- Create go-forit main worker loop to handle rpc methods 
+- Create go-forit client and wanted async rpc methods
+- Create go-forit main worker loop
 
 
-It does not require any platform like temporal nor changes to existing service. Easy to try, easy to quit. Want to do handle async calls with built-in retries and low overhead ? Go for it !
+It does not require any platform like temporal nor changes to existing service. Easy to try, easy to quit, just go for 
+
 
 
 
