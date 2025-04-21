@@ -46,5 +46,23 @@ func generateFile(gen *protogen.Plugin, file *protogen.File) *protogen.Generated
 	)
 	g.P()
 	g.P("package ", file.GoPackageName)
+	g.P()
+
+	g.P("import (")
+	g.P(`	"fmt"`)
+	g.P(")")
+	g.P()
+
+	// Generate methods for each RPC method
+	for _, service := range file.Services {
+		for _, method := range service.Methods {
+			methodName := method.GoName + "GoForIt"
+			g.P("func ", methodName, "(input *", method.Input.GoIdent.GoName, ") {")
+			g.P("\tfmt.Println(input)")
+			g.P("}")
+			g.P()
+		}
+	}
+
 	return g
 }
