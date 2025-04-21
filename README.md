@@ -13,7 +13,7 @@ It does not require any platform like temporal nor changes to existing service. 
 ## Example
 
 Greeter service is used to send an email to new users on account creation:
-```json
+```proto
 service Greeter {
   rpc SayHello (HelloRequest) returns (google.protobuf.Empty) {}
 }
@@ -22,7 +22,7 @@ service Greeter {
 It does not mater when nor after how many retries the email is sent. I would like my webservice to notify the need to send the email and process something else
 
 Let's use go-forit:
-```json
+```proto
 service Greeter {
   rpc SayHello (HelloRequest) returns (google.protobuf.Empty) {
     option (goforit.v1) = {
